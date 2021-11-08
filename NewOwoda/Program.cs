@@ -34,7 +34,7 @@ namespace NewOwoda
         public double GenTicket()
         {
             // method to get the tickets type and amount,method works fine
-            Console.WriteLine("\n Enter type of ticket you wish to buy");
+            Console.WriteLine("\n Enter type of ticket you wish to buy which is either day or month");
             string ticketType = Console.ReadLine();
             switch (ticketType)
             {
@@ -48,14 +48,14 @@ namespace NewOwoda
         }
         public void GenTicketId()
         {
-            double newId = rmd.Next(100);    
+            double newId = rmd.Next(100000000);    
             if (totalTicket > 0)              //this method is meant to generate a unique ticket id,
             {                                   //check it with stored tickets id and return it to the main
                 foreach (double i in ticketId)
                 {
                     {
                         while (newId == i)               //trying to iterate throught the stored tickets 
-                        { newId = rmd.Next(100); }       // to prevent future repetition
+                        { newId = rmd.Next(100000000); }       // to prevent future repetition
                     }
                 }
             }
