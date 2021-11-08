@@ -48,7 +48,7 @@ namespace NewOwoda
         }
         public void GenTicketId()
         {
-            double newId = rmd.Next(100);      // Arraylist
+            double newId = rmd.Next(100);    
             if (totalTicket > 0)              //this method is meant to generate a unique ticket id,
             {                                   //check it with stored tickets id and return it to the main
                 foreach (double i in ticketId)
